@@ -6,6 +6,11 @@ block_one <- list(index = 1,
              proof = 9,
              new_hash = NULL)
 
+library("digest")
+
+digest("Stata" ,"sha256") # first try
+digest("R", "sha256") # second try
+
 #Function that creates a hashed "block"
 hash_block <- function(block){
     block$new_hash <- digest(c(block$index,
@@ -69,3 +74,6 @@ previous_block <- blockchain[[1]]
                    "\t", "Proof: ", block_to_add$proof, "\n",
                    "\t", "Hash: ", block_to_add$new_hash)))
       }
+
+
+blockchain[[5]]
