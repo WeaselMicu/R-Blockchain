@@ -61,3 +61,5 @@ for (i in 1: num_of_blocks_to_add){
                    "\t", "Proof: ", block_to_add$proof, "\n",
                    "\t", "Hash: ", block_to_add$new_hash )))
 }
+
+blockchain[[1]]
